@@ -1,0 +1,11 @@
+{
+  "name": "baby-animals",
+  "version": "0.0.1",
+  "description": "An app for sending baby animal text messages",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marlena Compton",
+  "license": "MIT"
+}
