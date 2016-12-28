@@ -4,6 +4,9 @@ let express = require('express');
 let app = express();
 let port;
 
+
+app.use(express.static('public'));
+
 if (process.env.NODE_ENV == 'production') {
     port = process.env.PORT;
 }
