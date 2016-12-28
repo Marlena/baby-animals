@@ -4,6 +4,8 @@
   "description": "An app for sending baby animal text messages",
   "main": "app.js",
   "scripts": {
+    "start": "node app",
+    "postinstall": "gulp default",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Marlena Compton",
@@ -13,11 +15,12 @@
     "express": "^4.14.0",
     "gulp": "^3.9.1",
     "gulp-express": "^0.3.5",
-    "serve-static": "^1.11.1"
-  },
-  "devDependencies": {
+    "serve-static": "^1.11.1",
     "connect": "^3.5.0",
+    "gulp-mocha": "^3.0.1",
+    "gulp-util": "^3.0.8",
     "phantomjs": "^2.1.7",
+    "require-dir": "^0.3.1",
     "wdio-mocha-framework": "^0.5.8",
     "wdio-selenium-standalone-service": "0.0.7",
     "wdio-spec-reporter": "0.0.5",

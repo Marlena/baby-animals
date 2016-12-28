@@ -10,7 +10,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/**/*.js'
+        './test/features/**/*.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -22,13 +22,13 @@ exports.config = {
     // ============
     // Define your capabilities here. WebdriverIO can run multiple capabilities at the same
     // time. Depending on the number of capabilities, WebdriverIO launches several test
-    // sessions. Within your capabilities you can overwrite the spec and exclude options in
+    // sessions. Within your capabilities you can overwrite the test and exclude options in
     // order to group specific specs to a specific capability.
     //
     // First, you can define how many instances should be started at the same time. Let's
     // say you have 3 different capabilities (Chrome, Firefox, and Safari) and you have
-    // set maxInstances to 1; wdio will spawn 3 processes. Therefore, if you have 10 spec
-    // files and you set maxInstances to 10, all spec files will get tested at the same time
+    // set maxInstances to 1; wdio will spawn 3 processes. Therefore, if you have 10 test
+    // files and you set maxInstances to 10, all test files will get tested at the same time
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
@@ -139,7 +139,7 @@ exports.config = {
     // },
     //
     // Gets executed just before initialising the webdriver session and test framework. It allows you
-    // to manipulate configurations depending on the capability or spec.
+    // to manipulate configurations depending on the capability or test.
     // beforeSession: function (config, capabilities, specs) {
     // },
     //
