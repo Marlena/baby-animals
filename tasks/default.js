@@ -1,7 +1,6 @@
 const gulp = require('gulp');
-const server = require('gulp-express');
+const runSequence = require('run-sequence');
 
 
-gulp.task('default', function(){
-    server.run();
-});
+
+gulp.task('default', cb => runSequence('webdriver', cb));
