@@ -5,7 +5,6 @@
   "main": "app.js",
   "scripts": {
     "start": "node app",
-    "postinstall": "gulp server",
     "test": "gulp webdriver"
   },
   "author": "Marlena Compton",
@@ -14,8 +13,9 @@
     "connect": "^3.5.0",
     "express": "^4.14.0",
     "gulp": "^3.9.1",
-    "gulp-live-server": "0.0.30",
+    "gulp-connect": "^5.0.0",
     "gulp-mocha": "^3.0.1",
+    "gulp-nodemon": "^2.2.1",
     "gulp-util": "^3.0.8",
     "phantomjs": "^2.1.7",
     "require-dir": "^0.3.1",
