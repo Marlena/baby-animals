@@ -3,6 +3,7 @@ var connect = require('gulp-connect');
 const http = require('http');
 const serveStatic = require('serve-static');
 const nodemon = require('gulp-nodemon');
+const finalhandler = require('finalhandler');
 
 //server example code
 //https://github.com/micahblu/gulp-connect-php/issues/2
@@ -32,4 +33,18 @@ gulp.task('nodemon', function(){
     nodemon({
         script: 'app.js'
     })
+});
+
+gulp.task('simplest-server', function(){
+
+    var serve = serveStatic('./public');
+
+    var server = http.createServer(function onRequest(request, response){
+        serve(request, response, finalhandler);
+    });
+
+    server.listen(port, function(){
+        console.log('listening on port ' + port);
+    });
+
 });
