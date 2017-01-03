@@ -4,9 +4,7 @@ const http = require('http');
 const serveStatic = require('serve-static');
 const nodemon = require('gulp-nodemon');
 const finalhandler = require('finalhandler');
-
-//server example code
-//https://github.com/micahblu/gulp-connect-php/issues/2
+const express = require('express');
 
 let port;
 
@@ -45,6 +43,16 @@ gulp.task('simplest-server', function(){
 
     server.listen(port, function(){
         console.log('listening on port ' + port);
+    });
+
+});
+
+gulp.task('express-server', function(){
+
+    let app = express();
+    app.use(express.static('public'));
+    app.listen(port, function(){
+        console.log('listening on Port ' + port);
     });
 
 });
