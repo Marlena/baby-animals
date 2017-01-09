@@ -32,6 +32,8 @@ gulp.task('webdriver', ['integration'], ()=>{
 });
 
 gulp.task('mocha', () => {
+    //process.env.NODE_ENV = 'development';
+
     return gulp.src(['test/specs/**/*.js'], { read: false })
         .pipe(mocha({reporter: 'progress' }))
         .on('error', gutil.log);

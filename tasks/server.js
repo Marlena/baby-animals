@@ -5,6 +5,8 @@ const serveStatic = require('serve-static');
 const nodemon = require('gulp-nodemon');
 const finalhandler = require('finalhandler');
 const express = require('express');
+const myApp = require('../app');
+
 
 let port;
 
@@ -54,5 +56,12 @@ gulp.task('express-server', function(){
     app.listen(port, function(){
         console.log('listening on Port ' + port);
     });
+
+});
+
+gulp.task('server-listen', function(){
+  myApp.listen(port, function(){
+    console.log('listening on Port ' + port);
+  })
 
 });
